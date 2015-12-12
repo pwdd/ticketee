@@ -7,6 +7,7 @@ RSpec.feature 'Users can edit existing projects' do
   before do
     login_as(user)
     assign_role!(user, :viewer, project)
+    
     visit '/'
     click_link 'Sublime Text 3'
     click_link 'Edit Project'
