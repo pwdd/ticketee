@@ -41,13 +41,13 @@ class Admin::UsersController < Admin::ApplicationController
           @user.roles.build(project_id: project_id, role: role_name)
         end
       end
-      
+
       if @user.update(user_params)
-        flash[:notice] = 'User has been updated.'
+        flash[:notice] = "User has been updated."
         redirect_to admin_users_path
       else
-        flash.now[:alert] = 'User has not been updated.'
-        render 'edit'
+        flash.now[:alert] = "User has not been updated."
+        render "edit"
         raise ActiveRecord::Rollback
       end
     end
