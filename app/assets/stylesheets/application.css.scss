@@ -20,6 +20,7 @@
 @import "projects";
 @import "tickets";
 @import "admin/application";
+@import "admin/users";
 
 body {
   padding-top: 70px;
@@ -113,6 +114,24 @@ form {
   }
 }
 
+.roles {
+  @extend .table;
+  @extend .form-horizontal;
+
+  tr:first-child {
+    td, th {
+      border-top: 0px;
+    }
+  }
+
+  label {
+    @extend .control-label;
+  }
+
+  select {
+    @extend .form-control;
+  }
+}
 
 
 
