@@ -14,7 +14,8 @@ gem 'devise', '~> 3.4.1'
 gem 'pundit', '~> 0.3.0'
 gem 'carrierwave', '~> 0.10.0'
 gem 'database_cleaner', '~> 1.4'
-
+gem 'turbolinks'
+gem 'jquery-turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'web-console', '~> 2.0', group: :development
@@ -28,7 +29,7 @@ end
 group :test do
   gem 'capybara', '~> 2.4'
   gem 'factory_girl_rails', '~> 4.5'
-  gem 'selenium-webdriver', '~> 2.45'
+  gem 'selenium-webdriver'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
