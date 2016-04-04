@@ -52,3 +52,13 @@ RSpec.configure do |config|
   config.after(type: :feature) { Warden.test_reset! }
   config.include Devise::TestHelpers, type: :controller
 end
+
+Capybara.register_driver :selenium do |app|
+
+  custom_profile = Selenium::WebDriver::Firefox::Profile.new
+
+  # Turn off the super annoying popup!
+  custom_profile["network.http.prompt-temp-redirect"] = false
+
+  Capybara::Selenium::Driver.new(app, :browser => :firefox, :profile => custom_profile)
+end
