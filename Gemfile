@@ -17,6 +17,7 @@ gem 'database_cleaner', '~> 1.4'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'searcher', github: 'radar/searcher'
+gem 'fog', '~> 1.29.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'web-console', '~> 2.0', group: :development
