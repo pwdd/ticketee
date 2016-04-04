@@ -22,6 +22,11 @@
 @import "attachments";
 @import "comments";
 @import "tags";
+@import "responsive";
+@import "admin/application";
+@import "admin/projects";
+@import "admin/states";
+@import "admin/users";
 
 body {
   padding-top: 70px;
@@ -82,22 +87,6 @@ form {
   max-width: 500px;
 }
 
-@media(min-width: $screen-sm-min) {
-  header {
-    h1, h2, h3, h4, h5, h6 {
-      max-width: 55%;
-    } 
-  }
-  
-  ul.actions {
-    position: absolute;
-    bottom: -2px;
-    right: 2px;
-    max-width: 45%;
-    text-align: right;
-  } 
-}
-
 #attributes {
   @extend .table;
   @extend .table-condensed;
@@ -112,25 +101,6 @@ form {
   }
   td, th {
     line-height: 24px !important;
-  }
-}
-
-.roles {
-  @extend .table;
-  @extend .form-horizontal;
-
-  tr:first-child {
-    td, th {
-      border-top: 0px;
-    }
-  }
-
-  label {
-    @extend .control-label;
-  }
-
-  select {
-    @extend .form-control;
   }
 }
 
