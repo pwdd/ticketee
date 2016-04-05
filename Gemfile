@@ -21,6 +21,7 @@ gem 'fog', '~> 1.36'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'web-console', '~> 2.0', group: :development
 gem 'net-ssh'
+gem 'active_model_serializers', '~> 0.9.3'
 
 group :development, :test do
   gem 'byebug'
